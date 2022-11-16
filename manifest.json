@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Reservation Rapide",
+  "description": "reservation rapide des repas",
+  "version": "1.0.0",
+  "author": "BEN HAMOU MOHAMED",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Resto Extention"
+  },
+  "background": {
+    "scripts": ["script.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://resto.ensem.ac.ma/index.php*"],
+      "js": ["script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Resto Extention",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "permissions": ["tabs", "https://*/*", "http://*/*"]
+}
